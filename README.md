@@ -28,6 +28,9 @@ Change the amount of code repetition per exercise.
 
 testing
 
+console.log("Hello");
+setTimeout(() => {  console.log("World!"); }, 5000);
+
 
 
 
