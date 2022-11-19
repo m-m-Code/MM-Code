@@ -8,26 +8,43 @@ header {
 }
 
 footer div span {
-  color: white;
+  color: black;
 }
 
 main {
   padding: 3% 3%;
 }
+code{
+  font-size: 12px;
+}
 
-.first-column {
-  flex: 0 0 17%;
-  max-width: 50%;
+.menu {
+  padding: 6% 3%;
+  margin-right: 6%;
+}
+
+.mainPanel{
+
 }
 
 .sidebar {
   background-color: #646a85;
 }
 
+.button {
+  float: right;
+}
+
+.info-button{
+  float: right;
+}
+
 /* css for the coding-exercise-workplace */
 .coding-exercise-workplace {
-
+  margin-top: 9%;
 }
+
+
 
 
 .editor-container {
