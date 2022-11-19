@@ -1,0 +1,30 @@
+body {
+  background-color: #6B728E;
+  color: white;
+}
+
+header {
+  background-color: #50577A;
+}
+
+footer div span {
+  color: white;
+}
+
+main {
+  padding: 3% 3%;
+}
+
+.first-column {
+  flex: 0 0 17%;
+  max-width: 50%;
+}
+
+.sidebar {
+  background-color: #646a85;
+}
+
+/* css for the coding-exercise-workplace */
+.coding-exercise-workplace {
+  border-style: solid;
+}
