@@ -1,5 +1,6 @@
 body {
-  background-color: #141414;;
+  background-color: #141414;
+  ;
   /* color: white; */
 }
 
@@ -8,24 +9,37 @@ header {
 }
 
 footer div span {
-  color: black;
+  color: white;
 }
 
 main {
   padding: 3% 3%;
 }
-code{
+
+code {
   font-size: 12px;
 }
 
+/* ---------------------------------------------------------------  */
+/* Bootstrap style overriding */
+
+.navbar-nav{
+  position: absolute;
+  left: 23%;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+  padding-right: 3.5rem;
+    padding-left: 4.5rem;
+}
+
+/* ---------------------------------------------------------------  */
 .menu {
   padding: 6% 3%;
   margin-right: 6%;
 }
 
-.mainPanel{
-
-}
+.mainPanel {}
 
 .sidebar {
   background-color: #646a85;
@@ -35,7 +49,7 @@ code{
   float: right;
 }
 
-.info-button{
+.info-button {
   float: right;
 }
 
@@ -43,9 +57,6 @@ code{
 .coding-exercise-workplace {
   margin-top: 9%;
 }
-
-
-
 
 .editor-container {
   width: 900px;
