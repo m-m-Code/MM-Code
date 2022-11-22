@@ -1,19 +1,63 @@
-let editor = document.querySelector("#editor");
 
-ace.edit(editor, {
-  theme: "ace/theme/twilight",
-  mode: "ace/mode/html",
-});
+  var doneButton = document.querySelector('.doneButton');
+  var runCode = document.querySelector('.runcode');
+  var blockCode = document.querySelector('textarea');
+  var checkButton = document.querySelector('checkButton');
+  
+  // Setup Ace
+  let codeEditor = ace.edit("editor");
 
-var js = ace.createEditSession("some js code");
-var css = ace.createEditSession(["some", "css", "code here"]);
-// and then to load document into editor, just call
-editor.setSession(js);
+  let defaultCode = '<h1> Hello World</h1>';
 
-var showCode = document.querySelector("code p").innerText("hello");
+  let userCode = ' ';
+
+  //let defaultCode2 = '<p> this is a paragraph </p>'
+
+  let editorLib = {
+    init() {
+      // Configure Ace
+
+      // Theme
+      codeEditor.setTheme("ace/theme/xcode");
+
+      // Set language
+      codeEditor.session.setMode("ace/mode/html");
+
+      // Set Options
+      codeEditor.setOptions({
+
+      });
+
+      // Set Default Code
+      codeEditor.setValue(defaultCode);
 
 
-//
-// var noCopy= = document.querySelector(".coding-exercise-workplace");
-//
-//   noCopy.onpaste = returnfalse;
+    }
+  }
+
+
+
+  // runCode.addEventListener('click', ()=>{
+  //   var userCode = codeEditor.getValue();
+  //
+  //   try{
+  //     new function(usercode)
+  //   }catch (err){
+  //     console.error(err);
+  //   }
+  // });
+
+
+
+
+  doneButton.addEventListener('click', () => {
+    // Clear ace editor
+    codeEditor.setValue(' ');
+    doneButton.style.display='none';
+
+    checkButton.style.display='visibility';
+  })
+
+
+  /// this is where the code runs
+  editorLib.init();

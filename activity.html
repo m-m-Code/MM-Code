@@ -12,13 +12,11 @@
 
 </head>
 
-<body>
-
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="narbar-brand">
-          <h1>MM-Code</h1>
-        </a>
+<body oncopy="return false" oncut="return false" onpaste="return false">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="narbar-brand">
+      <h1>MM-Code</h1>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,74 +30,32 @@
       </div>
     </div>
   </nav>
-
-  
-
   <main class="row">
-
-    <div class="menu col-lg-3" class="sidebar d-flex flex-column flex-shrink-0 p-3">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-        <svg class="bi pe-none me-2" width="40" height="32">
-          <use xlink:href="#bootstrap"></use>
-        </svg>
-        <span class="fs-4">MM-Code Section</span>
-      </a>
-      <hr>
-      <ul class="nav nav-pills flex-column mb-auto">
-        <li class="nav-item">
-          <a href="#" class="nav-link active" aria-current="page">
-            <svg class="bi pe-none me-2" width="16" height="16">
-              <use xlink:href="#home"></use>
-            </svg>
-            Section - 1
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link link-dark">
-            <svg class="bi pe-none me-2" width="16" height="16">
-              <use xlink:href="#people-circle"></use>
-            </svg>
-            Section - 2
-          </a>
-        </li>
-      </ul>
-      <hr>
-    </div>
-
     <section class="mainPanel" class="col-lg-6" class="panel">
 
       <div class="code-panel">
-        <h1>HTML Structure</h1>
-
-          <code>
-            "this is where the code will be"
-           </code>
-
-        <button type="button" class="info-button btn btn-light" style="font-size:15px;">Description</button>
-
+        <h1 style="color:white;">HTML Structure</h1>
+      <p style="width:50%; color:white;"><br>The code below and the information box on the right hand side will always disappear when you're typing your code. <br><br>This will help your visual memory along side the exercise improving your muscle memory! It's all for your benefit!</p>
+        <button class="runcode" type="button" class="info-button btn btn-light" style="font-size:15px;">Description</button>
       </div>
-
       <div class="coding-exercise-workplace">
         <div class="editor-container">
-          <div id="editor" >//Write your Code here</div>
+          <div id="editor"></div>
         </div>
       </div>
-
-
-
       <div class="button">
-        <button type="button" class="btn btn-success">Done</button>
-
+        <button class="doneButton" type="button" class="btn btn-success">Begin</button>
+        <button class="checkButton" type="button" class="btn btn-success" hidden=hidden>Check code</button>
       </div>
-
-
     </section>
 
+  <div class="infobox col-lg-6">
+    <div class="content-info">
+      <h1>hello today will be be learning about html</h1>
 
+    </div>
+  </div>
   </main>
-
-
-
 
 
   <footer>
@@ -130,7 +86,10 @@
   </footer>
   <!-- ace editor scrit links -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js"></script>
+  <script src="lib/js/ace-editor/src-min/ace.html"></script>
 
+  <script src="lib/js/ace-editor/src-min/mode-javascript.js"></script>
+      <script src="lib/js/ace-editor/src-min/ext-language_tools.js"></script>
   <script src="activity.js"></script>
 
   <!-- Bootstrap js links -->
