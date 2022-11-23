@@ -2,12 +2,15 @@
   var doneButton = document.querySelector('.doneButton');
   var runCode = document.querySelector('.runcode');
   var blockCode = document.querySelector('textarea');
-  var checkButton = document.querySelector('checkButton');
-  
+  var checkButton1 = document.querySelector('.checkButton');
+  var infobox = document.querySelector('.infobox');
+
+
   // Setup Ace
   let codeEditor = ace.edit("editor");
 
-  let defaultCode = '<h1> Hello World</h1>';
+  let defaultCode = '<h1> Hello World </h1>';
+  let defaultCode3 = '<p> hello </p>'
 
   let userCode = ' ';
 
@@ -30,23 +33,14 @@
 
       // Set Default Code
       codeEditor.setValue(defaultCode);
-
+      codeEditor.setValue(defaultCode3);
 
     }
   }
 
+  checkButton1.addEventListener('click', ()=>{
 
-
-  // runCode.addEventListener('click', ()=>{
-  //   var userCode = codeEditor.getValue();
-  //
-  //   try{
-  //     new function(usercode)
-  //   }catch (err){
-  //     console.error(err);
-  //   }
-  // });
-
+  })
 
 
 
@@ -54,8 +48,8 @@
     // Clear ace editor
     codeEditor.setValue(' ');
     doneButton.style.display='none';
-
-    checkButton.style.display='visibility';
+    checkButton1.hidden= false;
+    infobox.hidden=true;
   })
 
 
