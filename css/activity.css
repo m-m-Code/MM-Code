@@ -8,12 +8,18 @@
     align-items: center;
     background-color: #1D3E53;
   }
+  h1{
+        color: green;
+  }
   nav{
   color: white;
   margin: 1% 0;
   }
   footer {
     background-color: #254B62;
+  }
+  p{
+    font-size: 12px;
   }
 
   main{
@@ -57,7 +63,8 @@
     align-items: center;
   }
   .panel-Description{
-    padding: 3% 0%;
+    width: 100%;
+    padding: 1.1% 0%;
     text-align: center;
   }
 
@@ -80,9 +87,8 @@
   /* css for the coding-exercise-workplace */
 
   .editor-container {
-    width: 900px;
+    width: 71%;
     height: 540px;
-    margin: 20px auto;
     position: relative;
   }
 

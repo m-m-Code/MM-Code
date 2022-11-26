@@ -8,10 +8,8 @@ var infobox = document.querySelector('.infobox');
 // Setup Ace
 let codeEditor = ace.edit("editor");
 
-let defaultCode =
-'<h1> Hello World </h1>'
-'<p> hello </p>';
-
+let defaultCode ='<h1> Hello World </h1>';
+let defaultCode1 ='<p> hello </p>';
 
 let userCode = ' ';
 
@@ -38,8 +36,8 @@ let editorLib = {
 
     });
     // Set Default Code
-    codeEditor.setValue(defaultCode);
-    codeEditor.clearSelection();
+    codeEditor.setValue(defaultCode + "hell");
+
     // codeEditor.firstLineNumber(defaultCode3);
 
   }
