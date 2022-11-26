@@ -5,6 +5,17 @@
   <meta charset="utf-8">
 
   <!-- bootstrap links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+
+  <!-- main panel fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css\activity.css">
@@ -12,14 +23,14 @@
 
 </head>
 
-<body oncopy="return false" oncut="return false" onpaste="return false">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body>
+<header>
+  <div id="logo">
     <a class="narbar-brand">
-      <h1>MM-Code</h1>
+      <h1 class="logo-title">MM-Code</h1>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light">
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="#">HTML</a>
@@ -30,27 +41,32 @@
       </div>
     </div>
   </nav>
-  <main class="row">
-    <section class="mainPanel" class="col-lg-6" class="panel">
+</header>
 
-      <div class="code-panel">
-        <h1 style="color:white;">HTML Structure</h1>
-        <p style="width:50%; color:white;"><br>The code below and the information box on the right hand side will always disappear when you're typing your code. <br><br>This will help your visual memory along side the exercise improving your muscle
+  <main>
+    <section class="mainPanel">
+
+      <!-- panel description -->
+      <div class="panel-Description">
+        <h1>HTML Structure</h1>
+        <p><br>The code below and the information box on the right hand side will always disappear when you're typing your code. <br><br>This will help your visual memory along side the exercise improving your muscle
           memory! It's all for your benefit!</p>
-        <button class="runcode" type="button" class="info-button btn btn-light" style="font-size:15px;">Description</button>
+        <button class="btn btn-light active" class="runcode" type="button">Description</button>
       </div>
-      <div class="coding-exercise-workplace">
-        <div class="editor-container">
-          <div id="editor"></div>
-        </div>
+      <!-- panel editor -->
+      <div class="editor-container">
+        <div id="editor"></div>
       </div>
+      <!-- panel button -->
       <div class="button">
-        <button class="doneButton" type="button" class="btn btn-success">Begin</button>
-        <button class="checkButton" type="button" class="btn btn-success" hidden="hidden">Check code</button>
+        <button class="btn btn-success" class="doneButton" type="button" >Begin</button>
+        <button class="btn btn-success" class="checkButton" type="button" hidden="hidden">Check code</button>
       </div>
     </section>
 
-    <div class="infobox col-lg-6">
+    <!-- the pop-Up -->
+
+    <!-- <div class="infobox col-lg-6">
       <div class="content-info">
         <h1 class="change">hello today will be be learning about html</h1>
 
@@ -76,13 +92,13 @@
 
         </p>
       </div>
-    </div>
+    </div> -->
   </main>
 
 
   <footer>
-    <div class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="container footer-content">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
         <div class="col-md-4 d-flex align-items-center">
           <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
             <svg class="bi" width="30" height="24">

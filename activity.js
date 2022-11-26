@@ -9,6 +9,8 @@
   // Setup Ace
   let codeEditor = ace.edit("editor");
 
+  //codeEditor.addEventListener("copy", stop, true)
+
   let defaultCode = '<h1> Hello World </h1>';
   let defaultCode3 = '<p> hello </p>'
 
@@ -34,9 +36,11 @@
       // Set Default Code
       codeEditor.setValue(defaultCode);
       codeEditor.setValue(defaultCode3);
-
+      codeEditor.onpaste ="return false";
     }
   }
+
+
 
   checkButton1.addEventListener('click', ()=>{
 
