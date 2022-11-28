@@ -8,8 +8,13 @@
   // Setup Ace
   let codeEditor = ace.edit("editor");
 
-  let defaultCode ='<h1> Hello World </h1>';
-  let defaultCode1 ='<p> hello </p>';
+  let exercise1 ='<h1> Hello World </h1>';
+  let exercise2 ='<p> hello </p>';
+
+  let exercise3 ='<p> bye </p>';
+  let exercise4 ='<p> morning </p>';
+
+  let check = document.querySelector(".nextExercise");
 
   let userCode = ' ';
 
@@ -36,12 +41,20 @@
 
       });
       // Set Default Code
-      codeEditor.setValue(defaultCode + "hell");
+      codeEditor.setValue(exercise1 +
+        " <!-- this is a h1-->");
+
+      
 
       // codeEditor.firstLineNumber(defaultCode3);
 
     }
   }
+
+
+
+
+
 
   function noCheating() {
     codeEditor.onCopy = function() {
@@ -59,13 +72,13 @@
 
   }
 
-  // doneButton.addEventListener('click', () => {
-  //   // Clear ace editor
-  //   codeEditor.setValue(' ');
-  //   doneButton.style.display='none';
-  //   checkButton1.hidden= false;
-  //   infobox.hidden=true;
-  // })
+  doneButton.addEventListener('click', () => {
+    // Clear ace editor
+    codeEditor.setValue(' ');
+    doneButton.style.display='none';
+    checkButton1.hidden= false;
+    infobox.hidden=true;
+  })
 
 
   /// this is where the code runs
