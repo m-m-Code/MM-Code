@@ -20,7 +20,7 @@
         // Configure Ace
 
         // Theme
-        codeEditor.setTheme("ace/theme/clouds_midnight");
+        codeEditor.setTheme("ace/theme/dracula");
 
         // Set language
         codeEditor.session.setMode("ace/mode/html");
