@@ -1,107 +1,145 @@
-  var doneButton = document.querySelector('.doneButton');
-  var runCode = document.querySelector('.runcode');
-  var blockCode = document.querySelector('textarea');
-  var checkButton1 = document.querySelector('.checkButton');
-  var infobox = document.querySelector('.infobox');
+    // Setup Ace
+    let codeEditor = ace.edit("editor");
+
+    let exercise1 = '<h1>Hello World</h1>';
+    // let exercise2 = '<p> hello </p>';
+    //
+    // let exercise3 = '<p> bye </p>';
+    // let exercise4 = '<p> morning </p>';
+
+    let check = document.querySelector(".nextExercise");
+
+    let userCode = ' ';
+
+    var e = '<ul>\n <li>Coffee</li> \n <li>Tea</li> \n <li>Milk</li>\n</ul>'
+
+    //let defaultCode2 = '<p> this is a paragraph </p>'
+
+    let editorLib = {
+      init() {
+        // Configure Ace
+
+        // Theme
+        codeEditor.setTheme("ace/theme/clouds_midnight");
+
+        // Set language
+        codeEditor.session.setMode("ace/mode/html");
+
+        // Set Options
+        codeEditor.setOptions({
+          highlightSelectedWord: false,
+          fontSize: '12pt',
+          newLineMode: "auto",
+          highlightGutterLine: true,
+          selectionStyle: 'line',
 
 
-  // Setup Ace
-  let codeEditor = ace.edit("editor");
-
-  let exercise1 ='<h1>Hello World</h1>';
-  let exercise2 ='<p> hello </p>';
-
-  let exercise3 ='<p> bye </p>';
-  let exercise4 ='<p> morning </p>';
-
-  let check = document.querySelector(".nextExercise");
-
-  let userCode = ' ';
-
-  //let defaultCode2 = '<p> this is a paragraph </p>'
-
-  let editorLib = {
-    init() {
-      // Configure Ace
-
-      // Theme
-      codeEditor.setTheme("ace/theme/clouds_midnight");
-
-      // Set language
-      codeEditor.session.setMode("ace/mode/html");
-
-      // Set Options
-      codeEditor.setOptions({
-        highlightSelectedWord: false,
-        fontSize: '12pt',
-        newLineMode: "auto",
-        highlightGutterLine: true,
-        selectionStyle: 'line',
-
-
-      });
-      // Set Default Code
-      codeEditor.setValue(exercise1);
-
+        });
+        // Set Default Code
+        codeEditor.setValue(e);
+        //currentExcise
         nextExercise();
-        checkUserCode();
+        muscleMemory();
 
-      // codeEditor.firstLineNumber(defaultCode3);
+
+        // codeEditor.firstLineNumber(defaultCode3);
+
+      }
+    }
+
+    var exercises = [
+      '<h1>This is heading 1</h1>',
+      '<p>This is a paragraph.</p>',
+      '<a href="https://www.w3schools.com">This is a link</a>',
+      '<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">',
+      '<button>Click me</button>',
+      '<ul>\n <li>Coffee</li> \n <li>Tea</li> \n <li>Milk</li>\n</ul>',
+    ]
+
+    function ChooseRandomExcise(arr) {
+      RandomExcise = Math.floor(Math.random() * 6);
+      var item = arr[RandomExcise];
+      return item
+    }
+
+
+    //this function get ridden of the checkButton and display the done doneButton
+    //this function chooses a random exercise from the array we created
+    function nextExercise() {
+      document.querySelector(".nextExercise").addEventListener("click", function() {
+        codeEditor.setValue(ChooseRandomExcise(exercises));
+        doneButtonValue.style.display = 'block';
+        checkButtonValue.hidden = true;
+      });
+    }
+
+    //this var gets the currentExcise
+    var currentExcise = ChooseRandomExcise(exercises);
+
+    //check the users code only
+    function checkUserCode() {
+      document.querySelector(".checkButton").addEventListener("click", function() {
+        var userCode = codeEditor.getValue();
+        if (userCode === currentExcise) {
+          console.log(currentExcise);
+          alert("well done G");
+          codeEditor.setValue('')
+        } else {
+          alert("its wrong fam")
+        };
+      });
+    };
+    //
+    // function setNextExcise(){
+    //
+    // }
+
+
+    function muscleMemory() {
+      var memory = 1;
+      for (var i = 0; i < memory; i++) {
+        memory[checkUserCode()];
+
+      }
 
     }
-  }
 
-  function nextExercise(){
-    document.querySelector(".nextExercise").addEventListener("click", function(){
-      codeEditor.setValue(exercise2);
-    })
-  }
-  // var currentExcise = 
 
-  // alert("well done G");
-  // codeEditor.setValue(" ");
-  function checkUserCode(){
-    document.querySelector(".checkButton").addEventListener("click", function(){
-      var userCode = codeEditor.getValue();
-      if (userCode === exercise1) {
-        alert("well done G");
-        codeEditor.setValue(" ");
+    // no cheating  function
+    function noCheating() {
+      codeEditor.onCopy = function() {
+        alert("This is cheating, focus on writing it out")
+      };
+      codeEditor.onCut = function() {
+        alert("This is cheating, focus on writing it out")
+      };
+      codeEditor.onPaste = function() {
+        alert("This is cheating, focus on writing it out")
+      };
+      codeEditor.getCopyText = function() {
+        alert("This is cheating, focus on writing it out")
+      };
 
-      }else{
-        alert("its wrong fam")
-      }
-    })
-  }
+    }
 
 
 
+    var doneButtonValue = document.querySelector('.doneButton');
+    var checkButtonValue = document.querySelector(".checkButton");
 
 
-  function noCheating() {
-    codeEditor.onCopy = function() {
-      alert("This is cheating, focus on writing it out")
-    };
-    codeEditor.onCut = function() {
-      alert("This is cheating, focus on writing it out")
-    };
-    codeEditor.onPaste = function() {
-      alert("This is cheating, focus on writing it out")
-    };
-    codeEditor.getCopyText = function() {
-      alert("This is cheating, focus on writing it out")
-    };
-
-  }
-
-  doneButton.addEventListener('click', () => {
-    // Clear ace editor
-    codeEditor.setValue(' ');
-    doneButton.style.display='none';
-    checkButton1.hidden= false;
-
-  })
 
 
-  /// this is where the code runs
-  editorLib.init();
-  noCheating();
+    function beginExcises() {
+      doneButtonValue.addEventListener('click', () => {
+        codeEditor.setValue('');
+        doneButtonValue.style.display = 'none';
+        checkButtonValue.hidden = false;
+      })
+    }
+
+
+    /// this is where the code runs
+    editorLib.init();
+    noCheating();
+    beginExcises();
