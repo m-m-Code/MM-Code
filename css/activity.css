@@ -29,10 +29,10 @@ html{
   main{
     color: white;
     background-color: #254B62;
-    background-image: url("https://github.com/thomas10-10/foo-Wallpaper-Feh-Gif/raw/master/desktop-animation2.gif");
+    /* background-image: url("https://github.com/thomas10-10/foo-Wallpaper-Feh-Gif/raw/master/desktop-animation2.gif");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
   }
   /* ---------------------------------------------------------------  */
   /* Nav - Logos */
@@ -95,7 +95,7 @@ html{
 
   }
   /* ---------------------------------------------------------------  */
-  
+
 
 
 

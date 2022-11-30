@@ -1,6 +1,5 @@
     // Setup Ace
     let codeEditor = ace.edit("editor");
-
     let exercise1 = '<h1>Hello World</h1>';
     // let exercise2 = '<p> hello </p>';
     //
@@ -36,7 +35,7 @@
 
         });
         // Set Default Code
-        codeEditor.setValue(e);
+        codeEditor.setValue(currentExcise);
         //currentExcise
         nextExercise();
         muscleMemory();
@@ -47,20 +46,25 @@
       }
     }
 
+    // '<h1>This is heading 1</h1>',
+    // '<p>This is a paragraph.</p>',
+    // '<a href="https://www.w3schools.com">This is a link</a>',
+    // '<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">',
+    // '<button>Click me</button>',
+    // '<ul>\n <li>Coffee</li> \n <li>Tea</li> \n <li>Milk</li>\n</ul>',
+
     var exercises = [
-      '<h1>This is heading 1</h1>',
-      '<p>This is a paragraph.</p>',
-      '<a href="https://www.w3schools.com">This is a link</a>',
-      '<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">',
-      '<button>Click me</button>',
-      '<ul>\n <li>Coffee</li> \n <li>Tea</li> \n <li>Milk</li>\n</ul>',
+      '<h1> hello </h1>',
+      '<p> bye </p>',
+      '<button> button </button>',
     ]
 
     function ChooseRandomExcise(arr) {
-      RandomExcise = Math.floor(Math.random() * 6);
+      RandomExcise = Math.floor(Math.random() * 3);
       var item = arr[RandomExcise];
       return item
     }
+
 
 
     //this function get ridden of the checkButton and display the done doneButton
@@ -83,23 +87,19 @@
         if (userCode === currentExcise) {
           console.log(currentExcise);
           alert("well done G");
-          codeEditor.setValue('')
+          codeEditor.setValue('');
         } else {
           alert("its wrong fam")
         };
       });
     };
-    //
-    // function setNextExcise(){
-    //
-    // }
+
 
 
     function muscleMemory() {
       var memory = 1;
       for (var i = 0; i < memory; i++) {
         memory[checkUserCode()];
-
       }
 
     }
@@ -123,12 +123,8 @@
     }
 
 
-
     var doneButtonValue = document.querySelector('.doneButton');
     var checkButtonValue = document.querySelector(".checkButton");
-
-
-
 
     function beginExcises() {
       doneButtonValue.addEventListener('click', () => {
