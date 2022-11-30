@@ -8,7 +8,7 @@
   // Setup Ace
   let codeEditor = ace.edit("editor");
 
-  let exercise1 ='<h1> Hello World </h1>';
+  let exercise1 ='<h1>Hello World</h1>';
   let exercise2 ='<p> hello </p>';
 
   let exercise3 ='<p> bye </p>';
@@ -41,16 +41,37 @@
 
       });
       // Set Default Code
-      codeEditor.setValue(exercise1 +
-        " <!-- this is a h1-->");
+      codeEditor.setValue(exercise1);
 
-      
+        nextExercise();
+        checkUserCode();
 
       // codeEditor.firstLineNumber(defaultCode3);
 
     }
   }
 
+  function nextExercise(){
+    document.querySelector(".nextExercise").addEventListener("click", function(){
+      codeEditor.setValue(exercise2);
+    })
+  }
+  // var currentExcise = 
+
+  // alert("well done G");
+  // codeEditor.setValue(" ");
+  function checkUserCode(){
+    document.querySelector(".checkButton").addEventListener("click", function(){
+      var userCode = codeEditor.getValue();
+      if (userCode === exercise1) {
+        alert("well done G");
+        codeEditor.setValue(" ");
+
+      }else{
+        alert("its wrong fam")
+      }
+    })
+  }
 
 
 
@@ -77,7 +98,7 @@
     codeEditor.setValue(' ');
     doneButton.style.display='none';
     checkButton1.hidden= false;
-    infobox.hidden=true;
+
   })
 
 
