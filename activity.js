@@ -10,7 +10,7 @@
       init() {
         // Configure Ace
         // Theme
-        codeEditor.setTheme("ace/theme/dracula");
+        codeEditor.setTheme("ace/theme/chaos");
         // Set language
         codeEditor.session.setMode("ace/mode/html");
         // Set Options
