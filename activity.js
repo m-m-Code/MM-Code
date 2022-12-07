@@ -31,6 +31,15 @@
       }
     }
 
+    let url = document.createElement('a');
+    url
+
+    function switchExericse(){
+      if (url.href = '') {
+
+      }
+    }
+
     function ChooseRandomExcise(arr) {
       RandomExcise = Math.floor(Math.random() * 3);
       var item = arr[RandomExcise];
