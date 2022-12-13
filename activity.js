@@ -1,7 +1,6 @@
     // Setup Ace
     let codeEditor = ace.edit("editor");
     let exercise1 = '<h1>Hello World</h1>';
-    let check = document.querySelector(".nextExercise");
     // let userCode = ' ';
     let currentExercise = ChooseRandomExercise(exercisesHtml);
     let userCode = codeEditor.getValue();
@@ -51,7 +50,7 @@
       codeEditor.getCopyText = function(){}
     }
 
-  
+
 
     /// this is where the code runs
     editorLib.init();
