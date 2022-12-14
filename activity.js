@@ -3,7 +3,7 @@
 
     let exercise1 = '<h1>Hello World</h1>';
     let check = document.querySelector(".nextExercise");
-    // let userCode = ' ';
+
     let currentExercise = ChooseRandomExercise(exercisesHtml);
     let userCode = codeEditor.getValue();
 
@@ -57,6 +57,11 @@
       codeEditor.getCopyText = function(){}
     }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 71afb1193e3812e769d57f7838adaa0eff41a513
     /// this is where the code runs
     editorLib.init();
     // noCheating();
