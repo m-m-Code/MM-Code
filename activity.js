@@ -1,5 +1,6 @@
     // Setup Ace
     let codeEditor = ace.edit("editor");
+
     let exercise1 = '<h1>Hello World</h1>';
     let check = document.querySelector(".nextExercise");
     // let userCode = ' ';
@@ -38,9 +39,14 @@
 
     //this function chooses a random exercise from the array we created
     function nextExercise() {
-      document.querySelector(".nextExercise").addEventListener("click", function() {
+      if (currentExercise <= 3 ) {
+        alert("hello");
+      }else(
+        alert("nopt")
+      )
+      document.querySelector(".skipMe").addEventListener("click", function() {
         codeEditor.setValue(ChooseRandomExercise(exercisesHtml));
-      });
+      })
     }
 
     // no cheating  function
@@ -51,9 +57,7 @@
       codeEditor.getCopyText = function(){}
     }
 
-  
-
     /// this is where the code runs
     editorLib.init();
-    noCheating();
-    beginExercises();
+    // noCheating();
+    nextExercise();
